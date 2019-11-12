@@ -1,3 +1,4 @@
+
 Spring Boot 学习示例
 =========================
 
@@ -15,7 +16,7 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 
 **示例代码**
 
-- [spring-boot-helloWorld](https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-helloWorld)：Spring Boot 的 hello World 版本
+- [spring-boot-helloWorld](https://github.com/506160753/springboot-plus/tree/master/springboot-hello)：Spring Boot 的 hello World示例
 - [spring-boot-web](https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-web)：Spring Boot Web 开发综合示例
 - [spring-boot-redis](https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-redis)：Spring Boot 集成 Redis 示例
 - [spring-boot-jpa](https://github.com/ityouknow/spring-boot-examples/tree/master/spring-boot-jpa)：Spring Boot 使用 Jpa 各种示例
