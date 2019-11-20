@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringbootXxlJobApplication {
 
     public static void main(String[] args) {
+        
         SpringApplication.run(SpringbootXxlJobApplication.class, args);
     }
 
