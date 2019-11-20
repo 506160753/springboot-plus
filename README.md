@@ -18,3 +18,4 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 
 - [springboot-hello](https://github.com/506160753/springboot-plus/tree/master/springboot-hello)：Spring Boot 的 hello World示例
 - [springboot-mybatis](https://github.com/506160753/springboot-plus/tree/master/springboot-mybatis)：Spring Boot 的 mybatis集成示例
+- [springboot-xxl-job](https://github.com/506160753/springboot-plus/tree/master/springboot-xxl-job)：Spring Boot 的 xxl-job集成示例
