@@ -15,7 +15,7 @@ import java.io.InputStreamReader;
  *
  * @author xuxueli 2018-09-16 03:48:34
  */
-@JobHandler(value="commandJobHandler")
+@JobHandler(value = "commandJobHandler")
 @Component
 public class CommandJobHandler extends IJobHandler {
 
@@ -51,7 +51,7 @@ public class CommandJobHandler extends IJobHandler {
         if (exitValue == 0) {
             return IJobHandler.SUCCESS;
         } else {
-            return new ReturnT<String>(IJobHandler.FAIL.getCode(), "command exit value("+exitValue+") is failed");
+            return new ReturnT<String>(IJobHandler.FAIL.getCode(), "command exit value(" + exitValue + ") is failed");
         }
     }
 

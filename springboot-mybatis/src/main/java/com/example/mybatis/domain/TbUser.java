@@ -86,5 +86,4 @@ public class TbUser implements Serializable {
     private Integer state;
 
 
-
 }

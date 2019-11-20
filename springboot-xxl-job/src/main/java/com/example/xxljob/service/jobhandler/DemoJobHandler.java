@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 任务Handler示例（Bean模式）
- *
+ * <p>
  * 开发步骤：
  * 1、继承"IJobHandler"：“com.xxl.job.core.handler.IJobHandler”；
  * 2、注册到Spring容器：添加“@Component”注解，被Spring容器扫描为Bean实例；
@@ -20,19 +20,19 @@ import java.util.concurrent.TimeUnit;
  *
  * @author xuxueli 2015-12-19 19:43:36
  */
-@JobHandler(value="demoJobHandler")
+@JobHandler(value = "demoJobHandler")
 @Component
 public class DemoJobHandler extends IJobHandler {
 
-	@Override
-	public ReturnT<String> execute(String param) throws Exception {
-		XxlJobLogger.log("XXL-JOB, Hello World.");
+    @Override
+    public ReturnT<String> execute(String param) throws Exception {
+        XxlJobLogger.log("XXL-JOB, Hello World.");
 
-		for (int i = 0; i < 5; i++) {
-			XxlJobLogger.log("beat at:" + i);
-			TimeUnit.SECONDS.sleep(2);
-		}
-		return SUCCESS;
-	}
+        for (int i = 0; i < 5; i++) {
+            XxlJobLogger.log("beat at:" + i);
+            TimeUnit.SECONDS.sleep(2);
+        }
+        return SUCCESS;
+    }
 
 }

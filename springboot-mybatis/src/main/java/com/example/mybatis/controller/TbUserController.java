@@ -19,7 +19,7 @@ public class TbUserController {
     private TbUserService tbUserService;
 
     @PostMapping("/selectById")
-    public TbUser selectById(Long id){
+    public TbUser selectById(Long id) {
         return tbUserService.selectById(id);
     }
 
