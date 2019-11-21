@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>jdbctemplate</artifactId>
+    <artifactId>SpringBoot-Hello</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot-jdbcTemplate</name>
+    <name>SpringBoot-Hello</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -40,24 +40,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.21</version>
-        </dependency>
-        <!-- MySQL 连接驱动依赖 -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
-        <!-- jdbcTemplate驱动 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>
