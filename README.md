@@ -10,12 +10,13 @@ Spring Boot 学习示例
  
 Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用。
 
+##博客
+- [流星の博客](https://blog.liuxing.group/) 学习记录博客
+
+
 ---
 
-## Spring Boot 2.0
+**谢铭**
 
-**示例代码**
-
-- [springboot-hello](https://github.com/506160753/springboot-plus/tree/master/springboot-hello)：Spring Boot 的 hello World示例
-- [springboot-mybatis](https://github.com/506160753/springboot-plus/tree/master/springboot-mybatis)：Spring Boot 的 mybatis集成示例
-- [springboot-xxl-job](https://github.com/506160753/springboot-plus/tree/master/springboot-xxl-job)：Spring Boot 的 xxl-job集成示例
+- [wuyouzhuguli/SpringAll](https://github.com/wuyouzhuguli/SpringAll)
+- [鸟叔的博客](https://mrbird.cc/)
