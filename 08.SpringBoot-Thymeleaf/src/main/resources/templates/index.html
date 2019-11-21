@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>index</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+</head>
+<body>
+    <table>
+		<tr>
+            <th>no</th>
+			<th>name</th>
+			<th>phone</th>
+		</tr>
+		<tr th:each="tbUser,stat : ${list}">
+		   <td th:text="${stat.count}"></td>
+		   <td th:text="${tbUser.loginName}"></td>
+		   <td th:text="${tbUser.phone}"></td>
+		</tr>
+    </table>
+</body>
+</html>

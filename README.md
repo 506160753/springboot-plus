@@ -25,6 +25,8 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 5. [SpringBoot集成JdbcTemplate](https://blog.liuxing.group/2019/11/21/springboot%e9%9b%86%e6%88%90jdbctemplate/)
 6. [SpringBoot集成JdbcTemplate配置Druid多数据源](https://blog.liuxing.group/2019/11/21/springboot-jdbctemplate%e9%9b%86%e6%88%90druid%e5%a4%9a%e6%95%b0%e6%8d%ae%e6%ba%90/)
 7. [SpringBoot集成AOP操作日志](https://blog.liuxing.group/2019/11/21/springboot%e9%9b%86%e6%88%90aop%e6%97%a5%e5%bf%97/)
+8. [SpringBoot集成Thymeleaf](https://blog.liuxing.group/2019/11/21/springboot%e9%9b%86%e6%88%90thymeleaf/)
+
 
 ---
 
