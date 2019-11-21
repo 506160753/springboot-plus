@@ -15,21 +15,21 @@ import javax.sql.DataSource;
 
 @Configuration
 @MapperScan(basePackages = MysqlSlaveDatasourceConfig.PACKAGE,
-	sqlSessionFactoryRef = "mysqlSlaveSqlSessionFactory")
+        sqlSessionFactoryRef = "mysqlSlaveSqlSessionFactory")
 public class MysqlSlaveDatasourceConfig {
 
-	// oracledao扫描路径
-	static final String PACKAGE = "com.example.multidatasource.mapper.slave";
-	// mybatis mapper扫描路径
+    // oracledao扫描路径
+    static final String PACKAGE = "com.example.multidatasource.mapper.slave";
+    // mybatis mapper扫描路径
 //	static final String MAPPER_LOCATION = "classpath:mapper/oracle/*.xml";
 
-	@Bean(name = "mysqlSlaveDataSource")
-	@ConfigurationProperties("spring.datasource.druid.slave")
-	public DataSource mysqlSlaveDataSource() {
-		return DruidDataSourceBuilder.create().build();
-	}
+    @Bean(name = "mysqlSlaveDataSource")
+    @ConfigurationProperties("spring.datasource.druid.slave")
+    public DataSource mysqlSlaveDataSource() {
+        return DruidDataSourceBuilder.create().build();
+    }
 
-	@Bean(name = "mysqlSlaveTransactionManager")
+    @Bean(name = "mysqlSlaveTransactionManager")
     public DataSourceTransactionManager mysqlSlaveTransactionManager() {
         return new DataSourceTransactionManager(mysqlSlaveDataSource());
     }
