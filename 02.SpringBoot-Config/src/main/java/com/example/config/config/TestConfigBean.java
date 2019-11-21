@@ -7,12 +7,12 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Configuration
-@ConfigurationProperties(prefix="test")
+@ConfigurationProperties(prefix = "test")
 @PropertySource("classpath:test.properties")
 @Data
 public class TestConfigBean {
 
-	private String name;
-	private int age;
+    private String name;
+    private int age;
 
 }

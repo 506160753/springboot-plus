@@ -22,12 +22,12 @@ import java.util.Map;
 public class TbUserDaoImpl implements TbUserDao {
 
     @Autowired
-	@Qualifier("masterJdbcTemplate")
-	private JdbcTemplate jdbcTemplate;
+    @Qualifier("masterJdbcTemplate")
+    private JdbcTemplate jdbcTemplate;
 
     @Autowired
-	@Qualifier("slaveJdbcTemplate")
-	private JdbcTemplate slaveJdbcTemplate;
+    @Qualifier("slaveJdbcTemplate")
+    private JdbcTemplate slaveJdbcTemplate;
 
     @Override
     public TbUser selectById(Long id) {
