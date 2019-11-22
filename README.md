@@ -28,6 +28,9 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 7. [SpringBoot集成AOP操作日志](https://blog.liuxing.group/2019/11/21/springboot%e9%9b%86%e6%88%90aop%e6%97%a5%e5%bf%97/)
 8. [SpringBoot集成Thymeleaf](https://blog.liuxing.group/2019/11/21/springboot%e9%9b%86%e6%88%90thymeleaf/)
 9. [SpringBoot集成缓存Cache](https://blog.liuxing.group/2019/11/21/springboot%e9%9b%86%e6%88%90redis-cache/)
+10. [SpringBoot集成Actuator端点监控](https://blog.liuxing.group/2019/11/22/springboot%e9%9b%86%e6%88%90actuator%e7%ab%af%e7%82%b9%e7%9b%91%e6%8e%a7/)
+11. [SpringBoot集成Admin监控](https://blog.liuxing.group/2019/11/22/springboot%e9%9b%86%e6%88%90admin%e7%9b%91%e6%8e%a7/)
+12. [SpringBoot集成Devtools热部署](https://blog.liuxing.group/2019/11/22/springboot%e9%9b%86%e6%88%90devtools%e7%83%ad%e9%83%a8%e7%bd%b2/)
 
 
 ---
