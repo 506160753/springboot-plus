@@ -25,7 +25,7 @@ public class TbUserController {
         list.add(tbUser);
         list.add(tbUser);
         list.add(tbUser);
-        model.addAttribute("list",list);
+        model.addAttribute("list", list);
         return "index";
     }
 
