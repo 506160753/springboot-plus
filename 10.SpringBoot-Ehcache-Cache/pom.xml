@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>ehcache-cache</artifactId>
+    <artifactId>SpringBoot-Ehcache-Cache</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>SpringBoot-Ehcache-Cache</name>
     <description>Demo project for Spring Boot</description>
