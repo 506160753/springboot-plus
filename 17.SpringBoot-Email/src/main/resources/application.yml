@@ -1,0 +1,15 @@
+server:
+  servlet:
+    context-path: /
+spring:
+  mail:
+    host: smtp.163.com
+    username: 18883680632@163.com
+    password: liuxing1992
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true

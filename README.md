@@ -32,6 +32,11 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 11. [SpringBoot集成Admin监控](https://blog.liuxing.group/2019/11/22/springboot%e9%9b%86%e6%88%90admin%e7%9b%91%e6%8e%a7/)
 12. [SpringBoot集成Devtools热部署](https://blog.liuxing.group/2019/11/22/springboot%e9%9b%86%e6%88%90devtools%e7%83%ad%e9%83%a8%e7%bd%b2/)
 13. [SpringBoot集成单元测试](https://blog.liuxing.group/2019/11/22/springboot%e9%9b%86%e6%88%90%e5%8d%95%e5%85%83%e6%b5%8b%e8%af%95/)
+14. [SpringBoot集成Logback日志](https://blog.liuxing.group/2019/11/25/springboot%e9%9b%86%e6%88%90logback%e6%97%a5%e5%bf%97/)
+15. [SpringBoot部署至Linux](https://blog.liuxing.group/2019/11/25/springboot%e9%83%a8%e7%bd%b2%e8%87%b3linux/)
+16. [SpringBoot集成XSS防护](https://blog.liuxing.group/2019/11/25/springboot%e9%9b%86%e6%88%90xss%e9%98%b2%e6%8a%a4/)
+17. [SpringBoot集成Email](https://blog.liuxing.group/2019/11/25/springboot%e9%9b%86%e6%88%90email/)
+
 
 
 ---
