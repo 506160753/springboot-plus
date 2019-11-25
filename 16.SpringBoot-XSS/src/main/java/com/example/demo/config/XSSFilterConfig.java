@@ -17,8 +17,7 @@ import java.util.Map;
  * @author ruoyi
  */
 @Configuration
-public class XSSFilterConfig
-{
+public class XSSFilterConfig {
     @Value("${xss.enabled}")
     private String enabled;
 
@@ -28,10 +27,9 @@ public class XSSFilterConfig
     @Value("${xss.urlPatterns}")
     private String urlPatterns;
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+    @SuppressWarnings({"rawtypes", "unchecked"})
     @Bean
-    public FilterRegistrationBean xssFilterRegistration()
-    {
+    public FilterRegistrationBean xssFilterRegistration() {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setDispatcherTypes(DispatcherType.REQUEST);
         registration.setFilter(new XssFilter());
