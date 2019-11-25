@@ -37,7 +37,8 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 16. [SpringBoot集成XSS防护](https://blog.liuxing.group/2019/11/25/springboot%e9%9b%86%e6%88%90xss%e9%98%b2%e6%8a%a4/)
 17. [SpringBoot集成Email邮件发送](https://blog.liuxing.group/2019/11/25/springboot%e9%9b%86%e6%88%90email/)
 18. [SpringBoot集成Swagger2接口文档](https://blog.liuxing.group/2019/11/25/springboot%e9%9b%86%e6%88%90swagger2%e6%8e%a5%e5%8f%a3%e6%96%87%e6%a1%a3/)
-18. [SpringBoot集成Exception统一异常处理](https://blog.liuxing.group/2019/11/25/springboot%E9%9B%86%E6%88%90exception%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/)
+19. [SpringBoot集成Exception统一异常处理](https://blog.liuxing.group/2019/11/25/springboot%E9%9B%86%E6%88%90exception%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/)
+20. [SpringBoot集成Cors跨域处理](https://blog.liuxing.group/2019/11/25/springboot%E8%B7%A8%E5%9F%9F%E5%A4%84%E7%90%86/)
 
 
 

@@ -8,8 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -75,6 +77,19 @@ public class GlobalExceptionHandler {
     public AjaxResult handleException(Exception e) {
         log.error(e.getMessage(), e);
         return AjaxResult.error("服务器错误，请联系管理员");
+    }
+
+    /**
+     * 处理上传异常
+     *
+     * @param e
+     * @return
+     */
+    @ExceptionHandler(value = MultipartException.class)
+    public AjaxResult handleAll(Exception e){
+        // TODO do Throwable t
+        log.error("文件过大,-{}", e);
+        return AjaxResult.error("文件上传异常");
     }
 
 
