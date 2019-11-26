@@ -70,14 +70,14 @@ class SpringBootTestingApplicationTests {
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
 
-//		mockMvc.perform(MockMvcRequestBuilders.get("/hello?name={name}","mrbird"));
+//		mockMvc.perform(MockMvcRequestBuilders.get("/hello?name={name}","Administrator"));
 //		mockMvc.perform(MockMvcRequestBuilders.post("/user/{id}", 1));
 //		mockMvc.perform(MockMvcRequestBuilders.fileUpload("/fileupload").file("file", "文件内容".getBytes("utf-8")));
 //		mockMvc.perform(MockMvcRequestBuilders.get("/hello").param("message", "hello"));
 //		mockMvc.perform(MockMvcRequestBuilders.get("/hobby/save").param("hobby", "sleep", "eat"));
 
 //		MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
-//		params.add("name", "mrbird");
+//		params.add("name", "Administrator");
 //		params.add("hobby", "sleep");
 //		params.add("hobby", "eat");
 //		mockMvc.perform(MockMvcRequestBuilders.get("/hobby/save").params(params));

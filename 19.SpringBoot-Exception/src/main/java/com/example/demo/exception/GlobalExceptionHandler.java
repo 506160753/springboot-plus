@@ -2,10 +2,12 @@ package com.example.demo.exception;
 
 import com.example.demo.domain.AjaxResult;
 import com.example.demo.utils.ServletUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
+import org.springframework.validation.FieldError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -15,6 +17,11 @@ import org.springframework.web.multipart.MultipartException;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.ConstraintViolation;
+import javax.validation.ConstraintViolationException;
+import javax.validation.Path;
+import java.util.List;
+import java.util.Set;
 
 /**
  * 全局异常处理器
@@ -59,14 +66,25 @@ public class GlobalExceptionHandler {
         }
     }
 
+
     /**
-     * 自定义验证异常
+     * 统一处理请求参数校验(实体对象传参)
+     *
+     * @param e BindException
+     * @return FebsResponse
      */
     @ExceptionHandler(BindException.class)
-    public AjaxResult validatedBindException(BindException e) {
-        log.error(e.getMessage(), e);
-        String message = e.getAllErrors().get(0).getDefaultMessage();
-        return AjaxResult.error(message);
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @SuppressWarnings("all")
+    public String validExceptionHandler(BindException e) {
+        StringBuilder message = new StringBuilder();
+        List<FieldError> fieldErrors = e.getBindingResult().getFieldErrors();
+        for (FieldError error : fieldErrors) {
+            message.append(error.getField()).append(error.getDefaultMessage()).append(",");
+        }
+        message = new StringBuilder(message.substring(0, message.length() - 1));
+        return message.toString();
+
     }
 
     /**
@@ -86,10 +104,31 @@ public class GlobalExceptionHandler {
      * @return
      */
     @ExceptionHandler(value = MultipartException.class)
-    public AjaxResult handleAll(Exception e){
+    public AjaxResult handleAll(Exception e) {
         // TODO do Throwable t
         log.error("文件过大,-{}", e);
         return AjaxResult.error("文件上传异常");
+    }
+
+    /**
+     * 统一处理请求参数校验(普通传参)
+     *
+     * @param e ConstraintViolationException
+     * @return FebsResponse
+     */
+    @ExceptionHandler(value = ConstraintViolationException.class)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @SuppressWarnings("all")
+    public String handleConstraintViolationException(ConstraintViolationException e) {
+        StringBuilder message = new StringBuilder();
+        Set<ConstraintViolation<?>> violations = e.getConstraintViolations();
+        for (ConstraintViolation<?> violation : violations) {
+            Path path = violation.getPropertyPath();
+            String[] pathArr = StringUtils.splitByWholeSeparatorPreserveAllTokens(path.toString(), ".");
+            message.append(pathArr[1]).append(violation.getMessage()).append(",");
+        }
+        message = new StringBuilder(message.substring(0, message.length() - 1));
+        return message.toString();
     }
 
 

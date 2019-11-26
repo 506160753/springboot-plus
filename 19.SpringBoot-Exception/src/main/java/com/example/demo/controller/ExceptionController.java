@@ -13,7 +13,7 @@ public class ExceptionController {
     }
 
     @GetMapping("/BusinessException")
-    public void BusinessException () {
+    public void BusinessException() {
         throw new BusinessException("有个自定义异常");
     }
 }
