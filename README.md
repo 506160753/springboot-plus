@@ -47,6 +47,12 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 21. [SpringBoot集成Async异步线程](https://blog.liuxing.group/2019/11/26/springboot%E9%9B%86%E6%88%90async%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B/)
 22. [SpringBoot集成Hibernate Validator参数校验](https://blog.liuxing.group/2019/11/26/springboot%E9%9B%86%E6%88%90hibernate-validator%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/)
 23. [SpringBoot集成使用过滤器和拦截器](https://blog.liuxing.group/2019/11/26/springboot%E4%BD%BF%E7%94%A8%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8/)
+24. [SpringBoot集成Shiro用户认证](https://blog.liuxing.group/2019/11/26/springboot%e9%9b%86%e6%88%90-shiro%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81/)
+25. [SpringBoot集成Shiro记住Cookie](https://blog.liuxing.group/2019/11/27/springboot%E9%9B%86%E6%88%90shiro%E8%AE%B0%E4%BD%8Fcookie/)
+26. [SpringBoot集成Shiro权限认证](https://blog.liuxing.group/2019/11/28/springboot%E9%9B%86%E6%88%90-shiro%E6%9D%83%E9%99%90%E8%AE%A4%E8%AF%81/)
+27. [SpringBoot集成Shiro缓存机制](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro%e7%bc%93%e5%ad%98%e6%9c%ba%e5%88%b6/)
+28. [SpringBoot集成Shiro会话管理](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro%e4%bc%9a%e8%af%9d%e7%ae%a1%e7%90%86/)
+29. [SpringBoot集成Shiro整合Thymeleaf鉴权](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro-thymeleaf%e9%89%b4%e6%9d%83/)
 
 
 

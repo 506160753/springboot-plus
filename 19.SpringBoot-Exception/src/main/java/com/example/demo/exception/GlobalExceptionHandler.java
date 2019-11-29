@@ -51,6 +51,21 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * 权限校验失败 如果请求为ajax返回json，普通请求跳转页面
+     */
+//    @ExceptionHandler(AuthorizationException.class)
+//    public Object handleAuthorizationException(HttpServletRequest request, AuthorizationException e) {
+//        log.error(e.getMessage(), e);
+//        if (ServletUtils.isAjaxRequest(request)) {
+//            return AjaxResult.error(PermissionUtils.getMsg(e.getMessage()));
+//        } else {
+//            ModelAndView modelAndView = new ModelAndView();
+//            modelAndView.setViewName("error/unauth");
+//            return modelAndView;
+//        }
+//    }
+
+    /**
      * 业务异常
      */
     @ExceptionHandler(BusinessException.class)
