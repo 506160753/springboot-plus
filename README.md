@@ -53,6 +53,7 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 27. [SpringBoot集成Shiro缓存机制](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro%e7%bc%93%e5%ad%98%e6%9c%ba%e5%88%b6/)
 28. [SpringBoot集成Shiro会话管理](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro%e4%bc%9a%e8%af%9d%e7%ae%a1%e7%90%86/)
 29. [SpringBoot集成Shiro整合Thymeleaf鉴权](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro-thymeleaf%e9%89%b4%e6%9d%83/)
+30. [SpringBoot集成Shiro整合Jwt认证](https://blog.liuxing.group/2019/11/30/springboot%E9%9B%86%E6%88%90shiro%E6%95%B4%E5%90%88jwt%E8%AE%A4%E8%AF%81/)
 
 
 
