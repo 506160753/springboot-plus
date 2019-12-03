@@ -54,8 +54,10 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 28. [SpringBoot集成Shiro会话管理](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro%e4%bc%9a%e8%af%9d%e7%ae%a1%e7%90%86/)
 29. [SpringBoot集成Shiro整合Thymeleaf鉴权](https://blog.liuxing.group/2019/11/29/springboot%e9%9b%86%e6%88%90shiro-thymeleaf%e9%89%b4%e6%9d%83/)
 30. [SpringBoot集成Shiro整合Jwt认证](https://blog.liuxing.group/2019/11/30/springboot%E9%9B%86%E6%88%90shiro%E6%95%B4%E5%90%88jwt%E8%AE%A4%E8%AF%81/)
-
-
+31. [SpringBoot集成Security组件](https://blog.liuxing.group/2019/12/02/springboot%e9%9b%86%e6%88%90security%e7%bb%84%e4%bb%b6/)
+32. [SpringBoot集成Security用户认证](https://blog.liuxing.group/2019/12/02/springboot%e9%9b%86%e6%88%90security%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81/)
+33. [SpringBoot集成Security图形验证](https://blog.liuxing.group/2019/12/03/springboot%E9%9B%86%E6%88%90security%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81/)
+34. [SpringBoot集成Security记住Cookie](https://blog.liuxing.group/2019/12/04/springboot%e9%9b%86%e6%88%90security%e8%ae%b0%e4%bd%8fcookie/)
 
 ---
 
