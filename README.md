@@ -46,6 +46,7 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 20. [SpringBoot集成Cors跨域处理](https://blog.liuxing.group/2019/11/25/springboot%E8%B7%A8%E5%9F%9F%E5%A4%84%E7%90%86/)
 21. [SpringBoot集成Async异步线程](https://blog.liuxing.group/2019/11/26/springboot%E9%9B%86%E6%88%90async%E5%BC%82%E6%AD%A5%E7%BA%BF%E7%A8%8B/)
 22. [SpringBoot集成Hibernate Validator参数校验](https://blog.liuxing.group/2019/11/26/springboot%E9%9B%86%E6%88%90hibernate-validator%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C/)
+22.1 [Spring表单校验](https://blog.liuxing.group/2019/11/26/spring%E8%A1%A8%E5%8D%95%E6%A0%A1%E9%AA%8C/)
 23. [SpringBoot集成使用过滤器和拦截器](https://blog.liuxing.group/2019/11/26/springboot%E4%BD%BF%E7%94%A8%E8%BF%87%E6%BB%A4%E5%99%A8%E5%92%8C%E6%8B%A6%E6%88%AA%E5%99%A8/)
 24. [SpringBoot集成Shiro用户认证](https://blog.liuxing.group/2019/11/26/springboot%e9%9b%86%e6%88%90-shiro%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81/)
 25. [SpringBoot集成Shiro记住Cookie](https://blog.liuxing.group/2019/11/27/springboot%E9%9B%86%E6%88%90shiro%E8%AE%B0%E4%BD%8Fcookie/)
@@ -58,6 +59,14 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 32. [SpringBoot集成Security用户认证](https://blog.liuxing.group/2019/12/02/springboot%e9%9b%86%e6%88%90security%e7%94%a8%e6%88%b7%e8%ae%a4%e8%af%81/)
 33. [SpringBoot集成Security图形验证](https://blog.liuxing.group/2019/12/03/springboot%E9%9B%86%E6%88%90security%E5%9B%BE%E5%BD%A2%E9%AA%8C%E8%AF%81/)
 34. [SpringBoot集成Security记住Cookie](https://blog.liuxing.group/2019/12/04/springboot%e9%9b%86%e6%88%90security%e8%ae%b0%e4%bd%8fcookie/)
+35. [SpringBoot集成Security退出登录](https://blog.liuxing.group/2019/12/04/springboot%E9%9B%86%E6%88%90security%E9%80%80%E5%87%BA%E7%99%BB%E5%BD%95/)
+36. [SpringBoot集成Security短信登录](https://blog.liuxing.group/2019/12/04/springboot%E9%9B%86%E6%88%90security%E7%9F%AD%E4%BF%A1%E7%99%BB%E5%BD%95/)
+37. [SpringBoot集成Security权限控制](https://blog.liuxing.group/2019/12/04/springboot%E9%9B%86%E6%88%90security%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/)
+37.1. [Spring Security权限控制方式](https://blog.liuxing.group/2019/12/04/spring-security%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6%E6%96%B9%E5%BC%8F/)
+38. [SpringBoot集成Security会话管理](https://blog.liuxing.group/2019/12/04/springboot%E9%9B%86%E6%88%90security%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86/)
+
+
+
 
 ---
 

@@ -3,7 +3,6 @@ package com.example.mybatis.properties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- *
  * @author Administrator
  */
 @ConfigurationProperties(prefix = "system")

@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import java.util.Date;
 
 /**
- *
  * @author Administrator
  */
 public class JWTUtil {

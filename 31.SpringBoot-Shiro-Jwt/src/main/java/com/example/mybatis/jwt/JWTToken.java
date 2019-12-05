@@ -4,7 +4,6 @@ import org.apache.shiro.authc.AuthenticationToken;
 
 /**
  * JSON Web Token
- *
  */
 public class JWTToken implements AuthenticationToken {
 

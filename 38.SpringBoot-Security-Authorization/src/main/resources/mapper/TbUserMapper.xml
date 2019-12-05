@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mybatis.mapper.TbUserMapper">
+
+    <select id="findByUserName" resultType="com.example.mybatis.domain.TbUser">
+        select * from tb_user where login_name = #{userName,jdbcType=VARCHAR}
+    </select>
+
+    <select id="selectById" resultType="com.example.mybatis.domain.TbUser">
+        select * from tb_user where id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="findRoleByUserId" resultType="com.example.mybatis.domain.TbRole">
+        select r.* from tb_role r
+        left join tb_user_role ur on(ur.role_id = r.id)
+        left join tb_user u on(u.id = ur.user_id)
+        where u.id = #{id,jdbcType=BIGINT}
+    </select>
+
+    <select id="findPermissionByUserId" resultType="com.example.mybatis.domain.TbPermission">
+        select p.* from tb_role r
+        left join tb_user_role ur on(r.id = ur.role_id)
+        left join tb_user u on(u.id = ur.user_id)
+        left join tb_role_permission rp on(rp.role_id = r.id)
+        left join tb_permission p on(p.id = rp.permission_id )
+        where u.id = #{id,jdbcType=BIGINT}
+    </select>
+
+</mapper>
