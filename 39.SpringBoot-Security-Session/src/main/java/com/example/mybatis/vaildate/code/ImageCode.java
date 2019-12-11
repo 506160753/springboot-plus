@@ -1,10 +1,12 @@
 package com.example.mybatis.vaildate.code;
 
 import java.awt.image.BufferedImage;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
-public class ImageCode {
+public class ImageCode implements Serializable {
 
+    private static final long serialVersionUID = -7831615057416168810L;
     private BufferedImage image;
 
     private String code;

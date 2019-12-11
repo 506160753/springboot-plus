@@ -41,6 +41,9 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private MyAuthenticationAccessDeniedHandler authenticationAccessDeniedHandler;
 
+    @Autowired
+    private MySessionExpiredStrategy sessionExpiredStrategy;
+
     @Bean
     public PersistentTokenRepository persistentTokenRepository() {
         JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
@@ -81,12 +84,16 @@ public class BrowserSecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests() // 授权配置
                 .antMatchers("/authentication/require",
                         "/login.html",
-                        "/code/image").permitAll() // 无需认证的请求路径
+                        "/code/image", "/session/invalid").permitAll() // 无需认证的请求路径
                 .anyRequest()  // 所有请求
                 .authenticated() // 都需要认证
                 .and()
                 .sessionManagement() // 添加 Session管理器
-                .invalidSessionUrl("/session/invalid") // Session失效后跳转到这个链接
+                .invalidSessionUrl("/session/invalid") //Session失效后跳转到这个链接
+                .maximumSessions(1)
+//                .maxSessionsPreventsLogin(true)
+                .expiredSessionStrategy(sessionExpiredStrategy)
+                .and()
                 .and().csrf().disable();
     }
 }
