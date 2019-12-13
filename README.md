@@ -63,6 +63,7 @@ Spring Boot 使用的各种示例，方便 Spring Boot 各组件的集成使用�
 36. [SpringBoot集成Security短信登录](https://blog.liuxing.group/2019/12/04/springboot%E9%9B%86%E6%88%90security%E7%9F%AD%E4%BF%A1%E7%99%BB%E5%BD%95/)
 37. [SpringBoot集成Security权限控制](https://blog.liuxing.group/2019/12/04/springboot%E9%9B%86%E6%88%90security%E6%9D%83%E9%99%90%E6%8E%A7%E5%88%B6/)
 38. [SpringBoot集成SecuritySession管理](https://blog.liuxing.group/2019/12/11/springboot%E9%9B%86%E6%88%90security-session%E7%AE%A1%E7%90%86/)
+39. [SpringBoot集成Security整合OAuth2认证](https://blog.liuxing.group/2019/12/13/springboot%E9%9B%86%E6%88%90security%E6%95%B4%E5%90%88oauth2%E8%AE%A4%E8%AF%81/)
 
 
 
