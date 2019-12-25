@@ -1,0 +1,10 @@
+rocketmq:
+  # 生产者配置
+  producer:
+    groupName: privider
+    namesrvAddr: 129.28.150.24:9876
+    default: false
+  # 消费者配置
+  consumer:
+    groupName: consumer
+    namesrvAddr: 129.28.150.24:9876

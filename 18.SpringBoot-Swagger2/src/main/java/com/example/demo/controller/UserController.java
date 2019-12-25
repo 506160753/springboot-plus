@@ -23,7 +23,7 @@ import java.util.Map;
  * @author Administrator
  * @date 2019/11/25 14:21
  */
-@Api(value = "用户Controller")
+@Api(tags = "用户Controller")
 @Controller
 @RequestMapping("/tbUser")
 public class UserController {
