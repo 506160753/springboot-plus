@@ -1,0 +1,105 @@
+security:
+  oauth2:
+    client:
+      client-id: app-a
+      client-secret: app-a-1234
+#      user-authorization-uri: http://127.0.0.1:8080/oauth/authorize
+      access-token-uri: http://127.0.0.1:8080/oauth/token
+    resource:
+      jwt:
+        key-uri: http://127.0.0.1:8080/oauth/token_key
+server:
+  port: 9090
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    druid:
+      # \u6570\u636E\u5E93\u8BBF\u95EE\u914D\u7F6E, \u4F7F\u7528druid\u6570\u636E\u6E90
+      type: com.alibaba.druid.pool.DruidDataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://112.74.55.215:3306/user_permission?useUnicode=true&characterEncoding=utf8
+      username: root
+      password: Tianwang@1234#
+      # \u8FDE\u63A5\u6C60\u914D\u7F6E
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # \u8FDE\u63A5\u7B49\u5F85\u8D85\u65F6\u65F6\u95F4
+      max-wait: 30000
+      # \u914D\u7F6E\u68C0\u6D4B\u53EF\u4EE5\u5173\u95ED\u7684\u7A7A\u95F2\u8FDE\u63A5\u95F4\u9694\u65F6\u95F4
+      time-between-eviction-runs-millis: 60000
+      # \u914D\u7F6E\u8FDE\u63A5\u5728\u6C60\u4E2D\u7684\u6700\u5C0F\u751F\u5B58\u65F6\u95F4
+      min-evictable-idle-time-millis: 300000
+      validation-query: select '1' from dual
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # \u6253\u5F00PSCache\uFF0C\u5E76\u4E14\u6307\u5B9A\u6BCF\u4E2A\u8FDE\u63A5\u4E0APSCache\u7684\u5927\u5C0F
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      max-pool-prepared-statement-per-connection-size: 20
+      # \u914D\u7F6E\u76D1\u63A7\u7EDF\u8BA1\u62E6\u622A\u7684filters, \u53BB\u6389\u540E\u76D1\u63A7\u754C\u9762sql\u65E0\u6CD5\u7EDF\u8BA1, 'wall'\u7528\u4E8E\u9632\u706B\u5899
+      filters: stat,wall
+      # Spring\u76D1\u63A7AOP\u5207\u5165\u70B9\uFF0C\u5982x.y.z.service.*,\u914D\u7F6E\u591A\u4E2A\u82F1\u6587\u9017\u53F7\u5206\u9694
+      aop-patterns: com.example.mybatis.servie.*
+
+
+      # WebStatFilter\u914D\u7F6E
+      web-stat-filter:
+        enabled: true
+        # \u6DFB\u52A0\u8FC7\u6EE4\u89C4\u5219
+        url-pattern: /*
+        # \u5FFD\u7565\u8FC7\u6EE4\u7684\u683C\u5F0F
+        exclusions: '*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*'
+
+      # StatViewServlet\u914D\u7F6E
+      stat-view-servlet:
+        enabled: true
+        # \u8BBF\u95EE\u8DEF\u5F84\u4E3A/druid\u65F6\uFF0C\u8DF3\u8F6C\u5230StatViewServlet
+        url-pattern: /druid/*
+        # \u662F\u5426\u80FD\u591F\u91CD\u7F6E\u6570\u636E
+        reset-enable: false
+        # \u9700\u8981\u8D26\u53F7\u5BC6\u7801\u624D\u80FD\u8BBF\u95EE\u63A7\u5236\u53F0
+        #        login-username: druid
+        #        login-password: druid123
+        # IP\u767D\u540D\u5355
+        # allow: 127.0.0.1
+        #\u3000IP\u9ED1\u540D\u5355\uFF08\u5171\u540C\u5B58\u5728\u65F6\uFF0Cdeny\u4F18\u5148\u4E8Eallow\uFF09
+        # deny: 192.168.1.218
+
+      # \u914D\u7F6EStatFilter
+      filter:
+        stat:
+          log-slow-sql: true
+
+
+  redis:
+    # Redis\u6570\u636E\u5E93\u7D22\u5F15\uFF08\u9ED8\u8BA4\u4E3A0\uFF09
+    database: 0
+    # Redis\u670D\u52A1\u5668\u5730\u5740
+    host: 112.74.55.215
+    # \u5BC6\u7801
+    password: Tianwang@1234#
+    # Redis\u670D\u52A1\u5668\u8FDE\u63A5\u7AEF\u53E3
+    port: 6379
+    # \u8FDE\u63A5\u8D85\u65F6\u65F6\u95F4\uFF08\u6BEB\u79D2\uFF09\u9ED8\u8BA4\u662F2000ms
+    timeout: 2000ms
+    # \u8FDE\u63A5\u6C60
+    lettuce:
+      pool:
+        # \u8FDE\u63A5\u6C60\u6700\u5927\u8FDE\u63A5\u6570\uFF08\u4F7F\u7528\u8D1F\u503C\u8868\u793A\u6CA1\u6709\u9650\u5236\uFF09
+        max-active: 200
+        # \u8FDE\u63A5\u6C60\u4E2D\u7684\u6700\u5927\u7A7A\u95F2\u8FDE\u63A5
+        max-idle: 20
+        # \u8FDE\u63A5\u6C60\u4E2D\u7684\u6700\u5C0F\u7A7A\u95F2\u8FDE\u63A5
+        min-idle: 10
+        # \u8FDE\u63A5\u6C60\u6700\u5927\u963B\u585E\u7B49\u5F85\u65F6\u95F4\uFF08\u4F7F\u7528\u8D1F\u503C\u8868\u793A\u6CA1\u6709\u9650\u5236\uFF09
+        max-wait: -1ms
+
+mybatis:
+  # mapper xml\u5B9E\u73B0\u626B\u63CF\u8DEF\u5F84
+  mapper-locations: classpath:mapper/*.xml
+  property:
+    order: BEFORE

@@ -68,4 +68,80 @@ public class PrividerController {
         });
     }
 
+
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
+
+    @RequestMapping("/send/{topic}/{msg}")
+    public String send(@PathVariable String topic,@PathVariable String msg){
+        rocketMQTemplate.convertAndSend(topic+":tag1", msg+":tag1");
+        for (int i = 0; i < 1; i++) {
+            rocketMQTemplate.asyncSendOrderly(topic, msg+i,String.valueOf(1),new SendCallback() {
+                @Override
+                public void onSuccess(SendResult sendResult) {
+                    log.info("传输成功");
+                    log.info(JSON.toJSONString(sendResult));
+                }
+                @Override
+                public void onException(Throwable e) {
+                    log.error("传输失败", e);
+                }
+            });
+        }
+        return "send";
+    }
+
+    @RequestMapping("/sendtx/{topic}/{msg}")
+    public String sendTx(@PathVariable String topic,@PathVariable String msg) throws InterruptedException {
+        org.springframework.messaging.Message message =  MessageBuilder.withPayload(msg).build();
+        System.out.println(Thread.currentThread().getName());
+
+        TransactionSendResult result = rocketMQTemplate.sendMessageInTransaction("group1", topic, message,"test");
+
+        System.out.println(result.getTransactionId());
+
+        return "sendtx";
+    }
+
+
+//    @Resource
+//    private RocketMQTemplate rocketMQTemplate;
+//
+//    @RequestMapping("/send/{topic}/{msg}")
+//    public String send(@PathVariable String topic,@PathVariable String msg){
+//        rocketMQTemplate.convertAndSend(topic+":tag1", msg+":tag1");
+//
+//        for (int i = 0; i < 1; i++) {
+//            rocketMQTemplate.asyncSendOrderly(topic, msg+i,String.valueOf(1),new SendCallback() {
+//                @Override
+//                public void onSuccess(SendResult sendResult) {
+//                    log.info("传输成功");
+//                    log.info(JSON.toJSONString(sendResult));
+//                }
+//                @Override
+//                public void onException(Throwable e) {
+//                    log.error("传输失败", e);
+//                }
+//            });
+//        }
+//
+//
+//        // rocketMQTemplate.
+//
+//
+//        return "send";
+//    }
+//
+//    @RequestMapping("/sendtx/{topic}/{msg}")
+//    public String sendTx(@PathVariable String topic,@PathVariable String msg) throws InterruptedException {
+//        Message message =  MessageBuilder.withPayload(msg).build();
+//        System.out.println(Thread.currentThread().getName());
+//
+//        TransactionSendResult result = rocketMQTemplate.sendMessageInTransaction("group1", topic, message,"test");
+//
+//        System.out.println(result.getTransactionId());
+//
+//        return "sendtx";
+//    }
+
 }

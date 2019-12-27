@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @MapperScan("com.example.mybatis.mapper")
-public class SpringBootSecurityOAuth2CustomizeApplication {
+public class SpringBootSecurityOAuth2ConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootSecurityOAuth2CustomizeApplication.class, args);
+        SpringApplication.run(SpringBootSecurityOAuth2ConfigApplication.class, args);
     }
 
 }

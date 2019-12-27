@@ -12,6 +12,7 @@ import org.springframework.security.oauth2.config.annotation.configurers.ClientD
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -96,15 +97,23 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("test1")
-                .secret(new BCryptPasswordEncoder().encode("test1111"))
-                .authorizedGrantTypes("password", "refresh_token")
+                .withClient("app-a")
+                .secret(new BCryptPasswordEncoder().encode("app-a-1234"))
+                .authorizedGrantTypes("refresh_token", "password")
                 .accessTokenValiditySeconds(3600)
                 .refreshTokenValiditySeconds(864000)
-                .scopes("all", "a", "b", "c")
+                .scopes("all")
                 .and()
-                .withClient("test2")
-                .secret(new BCryptPasswordEncoder().encode("test2222"))
-                .accessTokenValiditySeconds(7200);
+                .withClient("app-b")
+                .secret(new BCryptPasswordEncoder().encode("app-b-1234"))
+                .accessTokenValiditySeconds(3600)
+                .refreshTokenValiditySeconds(864000)
+                .scopes("all");
     }
+
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) {
+        security.tokenKeyAccess("isAuthenticated()"); // 获取密钥需要身份认证
+    }
+
 }

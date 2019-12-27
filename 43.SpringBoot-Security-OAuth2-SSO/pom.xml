@@ -9,10 +9,17 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>SpringBoot-Security-OAuth2-Config</artifactId>
+    <artifactId>SpringBoot-Security-OAuth2-SSO</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringBoot-Security-OAuth2-Config</name>
+    <name>SpringBoot-Security-OAuth2-SSO</name>
     <description>Demo project for Spring Boot</description>
+	
+	
+	<modules>
+        <module>sso-application-one</module>
+        <module>sso-application-two</module>
+        <module>sso-server</module>
+    </modules>
 
     <properties>
         <java.version>1.8</java.version>
