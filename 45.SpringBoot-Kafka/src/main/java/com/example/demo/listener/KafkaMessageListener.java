@@ -12,7 +12,7 @@ import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 /**
- * @author MrBird
+ * @author Administrator
  */
 @Component
 public class KafkaMessageListener {

@@ -9,7 +9,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 
 /**
- * @author MrBird
+ * @author Administrator
  */
 @Configuration
 public class JWTokenConfig {

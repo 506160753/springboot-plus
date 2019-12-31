@@ -1,0 +1,6 @@
+security:
+  basic:
+    enabled: true
+  user:
+    name: test
+    password: 123456

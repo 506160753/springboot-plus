@@ -9,7 +9,7 @@ import java.security.Principal;
 ;
 
 /**
- * @author MrBird
+ * @author Administrator
  */
 @RestController
 public class UserController {

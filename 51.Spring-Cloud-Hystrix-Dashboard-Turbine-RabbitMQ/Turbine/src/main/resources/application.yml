@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: Turbine
+  rabbitmq:
+    host: 112.74.55.215
+    port: 5672
+    username: admin
+    password: admin
+server:
+  port: 9003

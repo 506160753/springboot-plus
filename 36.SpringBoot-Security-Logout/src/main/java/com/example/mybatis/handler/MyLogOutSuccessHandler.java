@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * @author MrBird
+ * @author Administrator
  */
 @Component
 public class MyLogOutSuccessHandler implements LogoutSuccessHandler {
